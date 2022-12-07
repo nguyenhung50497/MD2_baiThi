@@ -1,0 +1,4 @@
+class girlFriend {
+    id: number;
+    
+}

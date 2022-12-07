@@ -1,0 +1,1 @@
+import {GirlFriend} from '../model

@@ -29,10 +29,10 @@ function main() {
         choice = +input.question(`Enter choice: `);
         switch (choice) {
             case 1:
-                showALlGirlFriend();
+                showALl();
                 break;
             case 2:
-                searchGirlFriendByName();
+                searchByName();
                 break;
             case 3:
                 addGirlFriend();
@@ -57,22 +57,22 @@ function display(arr: GirlFriend[]) {
     return str;
 }
 
-function showALlGirlFriend() {
-    if (girlFriendManager.findALl().length <= 0) {
+function showALl() {
+    if (girlFriendManager.showALl().length <= 0) {
         console.log(`Không có người yêu`);
     }
     else {
-        console.log(display(girlFriendManager.findALl()));
+        console.log(display(girlFriendManager.showALl()));
     }
 }
 
-function searchGirlFriendByName() {
+function searchByName() {
     let name = input.question(`Enter name: `);
     console.log(display(girlFriendManager.findByNameContaining(name)));
 }
 
 function addGirlFriend() {
-    let id = girlFriendManager.findALl().length;
+    let id = girlFriendManager.showALl().length;
     let flag = true;
     let name = '';
     do {
@@ -136,7 +136,7 @@ function addGirlFriend() {
 function deleteGirlFriend() {
     let choice = -1;
     do {
-        console.log(display(girlFriendManager.findALl()));
+        console.log(display(girlFriendManager.showALl()));
         console.log(`0. Thoát`);
         choice = +input.question(`Enter choice: `);
         if (choice === 0) {
@@ -144,7 +144,7 @@ function deleteGirlFriend() {
         }
         else {
             girlFriendManager.remove(choice-1);
-            deleteGirlFriend();
+            deleteGF();
             break;
         }
     } while (choice !== 0);
@@ -153,14 +153,14 @@ function deleteGirlFriend() {
 function editGirlFriend() {
     let choice = -1;
     do {
-        console.log(display(girlFriendManager.findALl()));
+        console.log(display(girlFriendManager.showALl()));
         console.log(`0. Thoát`);
         choice = +input.question(`Enter choice: `);
         if (choice === 0) {
             break;
         }
         else {
-            let girlFriend = girlFriendManager.findALl()[choice-1]
+            let girlFriend = girlFriendManager.showALl()[choice-1]
             console.log(`Ny cần sửa tt:
             ${choice}, ID: ${girlFriend.id} - Tên: ${girlFriend.name} - Cung HĐ: ${girlFriend.zodiac} - Quê: ${girlFriend.homeTown} - Năm sinh: ${girlFriend.yearBirth} - Sở thích: ${girlFriend.hobby}`);
             let flag = true;

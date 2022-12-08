@@ -185,7 +185,7 @@ function editGirlFriend() {
             5. Sư Tử
             0. Thoát`);
             choice2 = +input.question(`Enter choice: `);
-            zodiac = listZodiac[choice2-1];
+            zodiac = listZodiacs[choice2-1];
             let homeTown = '';
             flag = true;
             do {

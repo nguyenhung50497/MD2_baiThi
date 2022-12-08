@@ -6,12 +6,12 @@ export class GirlFriend {
     yearBirth: number;
     hobby: string;
 
-    constructor(id: number, name: string, zodiac: string, homeTown: string, yearBirth: number, hobby: string) {
+    constructor(id: number, name: string, zodiac: string, homeTown: string, year: number, hobby: string) {
         this.id = id;
         this.name = name;
         this.zodiac = zodiac;
         this.homeTown = homeTown;
-        this.yearBirth = yearBirth;
+        this.yearBirth = year;
         this.hobby = hobby;
     }
 
@@ -27,8 +27,8 @@ export class GirlFriend {
     getHomeTown(): string { 
         return this.homeTown; 
     }
-    getYearBirth(): number { 
-        return this.yearBirth; 
+    getYear(): number { 
+        return this.year; 
     }
     getHobby(): string { 
         return this.hobby; 
@@ -43,14 +43,14 @@ export class GirlFriend {
     setHomeTown(homeTown: string): void {
         this.homeTown = homeTown;
     }
-    setYearBirth(yearBirth: number): void {
-        this.yearBirth = yearBirth;
+    setYear(year: number): void {
+        this.year = year;
     }
     setHobby(hobby: string): void {
         this.hobby = hobby;
     }
 
     toString(): string {
-        return `ID: ${this.id} - Tên: ${this.name} - Cung HĐ: ${this.zodiac} - Quê: ${this.homeTown} - Năm sinh: ${this.yearBirth} - Sở thích: ${this.hobby}`
+        return `ID: ${this.id} - Tên: ${this.name} - Cung HĐ: ${this.zodiac} - Quê: ${this.homeTown} - Năm sinh: ${this.year} - Sở thích: ${this.hobby}`
     }
 }

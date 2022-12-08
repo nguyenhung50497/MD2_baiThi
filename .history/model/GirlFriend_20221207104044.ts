@@ -43,7 +43,7 @@ export class GirlFriend {
     setHomeTown(homeTown: string): void {
         this.homeTown = homeTown;
     }
-    setYearBirth(yearBirth: number): void {
+    setYear(yearBirth: number): void {
         this.yearBirth = yearBirth;
     }
     setHobby(hobby: string): void {
@@ -51,6 +51,6 @@ export class GirlFriend {
     }
 
     toString(): string {
-        return `ID: ${this.id} - Tên: ${this.name} - Cung HĐ: ${this.zodiac} - Quê: ${this.homeTown} - Năm sinh: ${this.yearBirth} - Sở thích: ${this.hobby}`
+        return `ID: ${this.id} - Tên: ${this.name} - Cung HĐ: ${this.zodiac} - Quê: ${this.homeTown} - Năm sinh: ${this.year} - Sở thích: ${this.hobby}`
     }
 }

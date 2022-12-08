@@ -51,6 +51,6 @@ export class GirlFriend {
     }
 
     toString(): string {
-        return `ID: ${this.id} - Tên: ${this.name} - Cung HĐ: ${this.zodiac} - Quê: ${this.homeTown} - Năm sinh: ${this.yearBirth} - Sở thích: ${this.hobby}`
+        return `ID: ${this.id} - Tên: ${this.name} - Cung HĐ: ${this.zodiac} - Quê: ${this.homeTown} - Năm sinh: ${this.year} - Sở thích: ${this.hobby}`
     }
 }
